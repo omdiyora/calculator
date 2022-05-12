@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="calc.css">
+    <title>Calc</title>
+</head>
+<body class="flex">  
+    <div class="calc">
+        <table cellspacing="0">
+            <tr>
+                <td colspan="4"><input type="text" name="" placeholder="0" id="display" readonly></td>
+            </tr>
+            <tr>
+                <td><button class="cmsilver" onclick="no('c')">AC</button></td>
+                <td><button class="cmsilver" disabled onclick="sign('')">+/-</button></td>
+                <td><button class="cmsilver" onclick="sign('%')">%</button></td>
+                <td><button class="cmorange" onclick="sign('/')">/</button></td>
+            </tr>
+            <tr>
+                <td><button class="cmblack" onclick="no(7)">7</button></td>
+                <td><button class="cmblack" onclick="no(8)">8</button></td>
+                <td><button class="cmblack" onclick="no(9)">9</button></td>
+                <td><button class="cmorange" onclick="sign('*')">x</button></td>
+            </tr>
+            <tr>
+                <td><button class="cmblack" onclick="no(4)">4</button></td>
+                <td><button class="cmblack" onclick="no(5)">5</button></td>
+                <td><button class="cmblack" onclick="no(6)">6</button></td>
+                <td><button class="cmorange" onclick="sign('-')" style="font-size: xx-large;">-</button></td>
+            </tr>
+            <tr>
+                <td><button class="cmblack" onclick="no(1)">1</button></td>
+                <td><button class="cmblack" onclick="no(2)">2</button></td>
+                <td><button class="cmblack" onclick="no(3)">3</button></td>
+                <td><button class="cmorange" onclick="sign('+')">+</button></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button class="zero_button cmblack" onclick="no(0)">0</button></td>
+                <td><button class="cmblack" onclick="no('.')">.</button></td>
+                <td><button class="cmorange" onclick="ans()">=</button></td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- JavaScript File -->
+    <!-- <script src="calc.js"></script> -->
+
+    <script>
+
+        var fval , sval, m;
+        function no(n)
+        {
+            // alert(n)
+            // document.getElementById('display').value = document.getElementById('display').value + n;
+
+            document.getElementById('display').value +=n;
+
+            if(n == 'c')
+            {
+                document.getElementById('display').value = ''
+            }
+        }
+
+        function sign(s)
+        {
+            m = s;
+            // alert(s)
+            fval = document.getElementById('display').value;
+
+            // alert(fval)
+
+            document.getElementById('display').value='';
+        }
+
+        function ans()
+        {
+            sval = document.getElementById('display').value;
+            // alert(sval)
+            if(m=='+')
+            {
+                result = parseInt(fval) + parseInt(sval);
+            }
+
+            document.getElementById('display').value = result;
+        }
+
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+/********************* Default Css ******************/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    /* background-color: black; */
+}
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/******************  Different Css***********************/
+.calc{
+    width: 280px;
+    color: whitesmoke;
+    background-color: black;
+    border-radius: 22px 22px 22px 22px;
+}
+table{
+    width: 100%;
+    border-radius: 22px 22px 22px 22px;
+    padding: 20px 5px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+}
+input[type=text]{
+    width: 92%;
+    /* height: 90px; */
+    background-color: rgba(255, 255, 255, 0.25);
+    /* box-shadow: 0 0 5px white; */
+    text-align: right;
+    margin: 20px 0;
+    outline: none;
+    border: none;
+    color: white;
+    font-size: xx-large;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+}
+td{
+    width: 25%;
+    text-align: center;
+    border-radius: 22px 22px 22px 22px;
+    /* margin: 15px 0; */
+    padding: 5px 0;
+}
+button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    font-size: larger;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+}
+.zero_button{
+    width: 120px;
+    border-radius: 22px 22px 22px 22px;
+    text-align: left;
+    padding-left: 18px;
+}
+.cmsilver{
+    background-color: silver;
+}
+.cmorange{
+    background-color: orange;
+    color: white;
+}
+.cmblack{
+    background-color: rgb(63, 62, 62);
+    color: white;
+}
